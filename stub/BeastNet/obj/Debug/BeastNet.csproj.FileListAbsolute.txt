@@ -1,0 +1,13 @@
+C:\Users\unknown\source\repos\BeastNet\BeastNet\bin\Debug\BeastNet.exe.config
+C:\Users\unknown\source\repos\BeastNet\BeastNet\bin\Debug\BeastNet.exe
+C:\Users\unknown\source\repos\BeastNet\BeastNet\bin\Debug\BeastNet.pdb
+C:\Users\unknown\source\repos\BeastNet\BeastNet\obj\Debug\BeastNet.csprojAssemblyReference.cache
+C:\Users\unknown\source\repos\BeastNet\BeastNet\obj\Debug\BeastNet.csproj.CoreCompileInputs.cache
+C:\Users\unknown\source\repos\BeastNet\BeastNet\obj\Debug\BeastNet.exe
+C:\Users\unknown\source\repos\BeastNet\BeastNet\obj\Debug\BeastNet.pdb
+C:\Users\dbrls\OneDrive\Desktop\BeastNet\BeastNet\obj\Debug\BeastNet.csprojAssemblyReference.cache
+C:\Users\dbrls\OneDrive\Desktop\BeastNet\BeastNet\obj\Debug\BeastNet.exe
+C:\Users\dbrls\OneDrive\Desktop\BeastNet\BeastNet\obj\Debug\BeastNet.pdb
+C:\Users\dbrls\OneDrive\Desktop\BeastNet\BeastNet\bin\Debug\BeastNet.exe.config
+C:\Users\dbrls\OneDrive\Desktop\BeastNet\BeastNet\bin\Debug\BeastNet.exe
+C:\Users\dbrls\OneDrive\Desktop\BeastNet\BeastNet\bin\Debug\BeastNet.pdb

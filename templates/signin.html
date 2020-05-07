@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{{ .title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+        <div class="container"><a class="navbar-brand secondary" style="background-color: #ffffff;margin-right: 0px;" href="home">Buntu</a><a class="navbar-brand" style="background-color: #ffffff;" href="home">Net</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="baas">BaaS</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="https://t.me/buntunet">Contact</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="signin">Sign in</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="signup">Sign up</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>{{ if .ErrorTitle}}<div role="alert" class="alert alert-success" style="margin-bottom: 0px;color: rgb(87,25,21);background-color: rgb(237,214,212);"><span><strong>{{ .ErrorTitle }} </strong>{{ .ErrorMessage }}</span></div>{{end}}
+    <div class="login-clean" style="background-color: rgb(255,255,255);">
+        <form method="post" style="background-color: #ff7324;">
+            <h2 class="sr-only">Login Form</h2>
+            <div class="illustration"><i class="icon ion-network" style="color: rgb(255,255,255);"></i></div>
+            <div class="form-group"><input class="form-control" type="text" name="username" placeholder="Username"></div>
+            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: rgb(255,255,255);color: rgb(80, 94,108);">Sign in</button></div>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>

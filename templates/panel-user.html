@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{{ .title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body style="background-image: url(&quot;assets/img/wallpaperflare.com_wallpaper.jpg&quot;);background-size: cover;background-repeat: no-repeat;"><div class="sidebar">
+  <a href="news">News</a>
+  <a href="bots">Bots</a>
+  <a href="tasks">Tasks</a>
+  <a href="logout">User</a>
+</div>
+    <div style="padding-left: 250px;padding-right: 50px;padding-top: 50px;padding-bottom: 50px;">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">User</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Status: {{ .status }}<br>Expiry date: {{ .expdate }}<br>Balance: {{ .balance }}<br><br>Your Bitcoin Address: {{ .address }}<br>(to charge balance, send any amount to this address.)</p>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <div class="row">
+                            <div class="col-md-12"><button class="btn btn-primary" type="button" style="background-color: rgb(255,128,74);margin-right: 20px;">Buy</button><button class="btn btn-primary" type="button" style="background-color: rgb(255,0,0);">Logout</button></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12" style="margin-top: 13px;"><span>1 Month: 35<br>One month will be added to the expired date.<br>The amount will be deducted from the balance.<br></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+C:\Users\unknown\source\repos\BeastNet\BeastNet\bin\x86\Release\BeastNet.exe.config
+C:\Users\unknown\source\repos\BeastNet\BeastNet\bin\x86\Release\BeastNet.exe
+C:\Users\unknown\source\repos\BeastNet\BeastNet\bin\x86\Release\BeastNet.pdb
+C:\Users\unknown\source\repos\BeastNet\BeastNet\obj\x86\Release\BeastNet.csproj.CoreCompileInputs.cache
+C:\Users\unknown\source\repos\BeastNet\BeastNet\obj\x86\Release\BeastNet.exe
+C:\Users\unknown\source\repos\BeastNet\BeastNet\obj\x86\Release\BeastNet.pdb
+C:\Users\Godbuntu\Desktop\Programming\BeastNet\BeastNet\bin\x86\Release\BeastNet.exe.config
+C:\Users\Godbuntu\Desktop\Programming\BeastNet\BeastNet\bin\x86\Release\BeastNet.exe
+C:\Users\Godbuntu\Desktop\Programming\BeastNet\BeastNet\bin\x86\Release\BeastNet.pdb
+C:\Users\Godbuntu\Desktop\Programming\BeastNet\BeastNet\obj\x86\Release\BeastNet.csprojAssemblyReference.cache
+C:\Users\Godbuntu\Desktop\Programming\BeastNet\BeastNet\obj\x86\Release\BeastNet.exe
+C:\Users\Godbuntu\Desktop\Programming\BeastNet\BeastNet\obj\x86\Release\BeastNet.pdb
